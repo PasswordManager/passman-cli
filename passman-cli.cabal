@@ -19,7 +19,10 @@ build-type:          Simple
 extra-source-files:  README.md
                    , ChangeLog.md
 cabal-version:       2.0
-tested-with:         GHC >= 8.0.1 && <= 8.2.2
+tested-with:         GHC == 8.0.2
+                   , GHC == 8.2.2
+                   , GHC == 8.4.3
+                   , GHC == 8.6.1
 
 flag dummyClipboard
   description:         Use the dummy clipboard
@@ -38,7 +41,7 @@ executable passman-cli
                        Paths_passman_cli
   autogen-modules:     Paths_passman_cli
   ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
-  build-depends:       base                  >= 4.9 && < 4.11
+  build-depends:       base                  >= 4.9 && < 4.13
                      , conduit              ^>= 1.2.11
                      , contravariant        ^>= 1.4
                      , haskeline            ^>= 0.7.2.3
